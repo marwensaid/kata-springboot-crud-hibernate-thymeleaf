@@ -1,11 +1,6 @@
 package com.howtodoinjava.demo.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name="TBL_EMPLOYEES")
@@ -25,7 +20,7 @@ public class EmployeeEntity {
     private String email;
     
     public Long getId() {
-		return id;
+		return this.id;
 	}
 
 	public void setId(Long id) {
@@ -33,7 +28,7 @@ public class EmployeeEntity {
 	}
 
 	public String getFirstName() {
-		return firstName;
+		return this.firstName;
 	}
 
 	public void setFirstName(String firstName) {
@@ -41,7 +36,7 @@ public class EmployeeEntity {
 	}
 
 	public String getLastName() {
-		return lastName;
+		return this.lastName;
 	}
 
 	public void setLastName(String lastName) {
@@ -49,7 +44,7 @@ public class EmployeeEntity {
 	}
 
 	public String getEmail() {
-		return email;
+		return this.email;
 	}
 
 	public void setEmail(String email) {
@@ -58,7 +53,7 @@ public class EmployeeEntity {
 
     @Override
     public String toString() {
-        return "EmployeeEntity [id=" + id + ", firstName=" + firstName + 
-                ", lastName=" + lastName + ", email=" + email   + "]";
+        return "EmployeeEntity [id=" + this.id + ", firstName=" + this.firstName +
+                ", lastName=" + this.lastName + ", email=" + this.email + "]";
     }
 }
